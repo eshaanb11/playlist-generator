@@ -1,4 +1,4 @@
-# Automatic Playlist Generator 🎵
+# Automatic Playlist Generator
 
 ## Overview
 
@@ -76,3 +76,5 @@ playlist-generator/
 * Save playlists for later viewing using JSON or a database
 * Allow users to filter by **mood, popularity, or tempo**
 * Deploy the app online using **Heroku, Render, or Vercel**
+
+Used ChatGPT to help with the HTML and CSS files for the UI of this app. 
