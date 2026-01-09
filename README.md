@@ -6,6 +6,8 @@ This **Automatic Playlist Generator** is a Flask-based web application that crea
 
 This project was built as a way to learn **full-stack web development**, **API integration**, and **JSON parsing**, while creating a fun, interactive application.
 
+**Live Demo** : https://playlist-generator-app-0lof.onrender.com
+
 ---
 
 ## Features
