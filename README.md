@@ -57,16 +57,6 @@ playlist-generator/
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-* Python 3.x
-* Virtual environment (`venv`) recommended
-* Last.fm API key
-
----
-
 ## Skills Gained
 
 * Building **full-stack web applications** with Flask
