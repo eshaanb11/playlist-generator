@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic Playlist Generator</title>
+
+    <!-- Link CSS correctly using Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Automatic Playlist Generator</h1>
+        <p>Enter a genre and generate a playlist using real music data.</p>
+
+        <form method="POST">
+            <input type="text" name="genre" placeholder="Enter genre" required>
+            <button type="submit">Generate Playlist</button>
+        </form>
+
+        {% if playlist %}
+        <div class="playlist">
+            <h2>Top Tracks</h2>
+            <ul>
+                {% for song in playlist %}
+                <li>{{ song }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="footer">
+            Built with Flask & the Last.fm API
+        </div>
+    </div>
+
+</body>
+
+</html>

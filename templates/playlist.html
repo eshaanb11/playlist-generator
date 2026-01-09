@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ genre }} Playlist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{ genre }} – Auto Playlist</h1>
+        <p class="subtitle">Generated using Last.fm data</p>
+
+        {% if tracks %}
+        <ul class="playlist">
+            {% for track in tracks %}
+            <li class="playlist-item">
+                <div class="track-info">
+                    <span class="track-name">{{ track.name }}</span>
+
+                    <a href="{{ track.url }}" target="_blank" class="track-link">
+                        View on Last.fm
+                    </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div class="error-box">
+            <p>No tracks found. Try another genre.</p>
+        </div>
+        {% endif %}
+
+        <a href="/" class="back-button">← Generate another playlist</a>
+    </div>
+</body>
+
+</html>

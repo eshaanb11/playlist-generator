@@ -1,0 +1,164 @@
+/* ===== RESET + BASE ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #121212, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    background-color: #181818;
+    padding: 2.75rem 3rem;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Subtle entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #b3b3b3;
+    margin-bottom: 2rem;
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"] {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+    background-color: #333333;
+}
+
+input[type="text"]::placeholder {
+    color: #9a9a9a;
+}
+
+/* ===== BUTTON ===== */
+button {
+    background-color: #1db954;
+    color: #000000;
+    border: none;
+    border-radius: 999px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+button:hover {
+    background-color: #1ed760;
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(29, 185, 84, 0.35);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* ===== ERROR MESSAGE ===== */
+.error {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background-color: rgba(255, 77, 77, 0.12);
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+/* ===== PLAYLIST SECTION ===== */
+.playlist {
+    margin-top: 2.2rem;
+    text-align: left;
+}
+
+.playlist h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+    font-weight: 600;
+}
+
+/* ===== PLAYLIST ITEMS ===== */
+.playlist ul {
+    list-style: none;
+}
+
+.playlist li {
+    padding: 0.7rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+/* Hover animation */
+.playlist li:hover {
+    background-color: #2a2a2a;
+    transform: translateX(4px);
+    cursor: pointer;
+}
+
+/* Divider effect */
+.playlist li+li {
+    margin-top: 0.25rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #777777;
+    text-align: center;
+}
